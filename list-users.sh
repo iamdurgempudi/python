@@ -1,5 +1,15 @@
 #!/bin/bash
 
+########
+#About:This will give list users with read access
+#Input:Export username, export token , repoowner and repo name all these details need to given ..
+#
+#Owner:Naveen Reddy Durgempudi
+#
+##########
+
+helper()
+
 # GitHub API URL
 API_URL="https://api.github.com"
 
@@ -36,6 +46,12 @@ function list_users_with_read_access {
     fi
 }
 
+function helper{
+experted_cmd_arg=2
+if[ $# -ne $experted_cmd_arg ]; then
+echo "please execute the script with required cmd args"
+echo"asd"
+}
 # Main script
 
 echo "Listing users with read access to ${REPO_OWNER}/${REPO_NAME}..."
